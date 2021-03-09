@@ -1,3 +1,44 @@
+0.20.21	UNRELEASED
+
+ * In porcelain.push, default to local active branch.
+   (Jelmer Vernooĳ, #846)
+
+ * Support fetching symrefs.
+   (Jelmer Vernooĳ, #485, #847)
+
+0.20.20	2021-03-03
+
+ * Implement ``Stash.drop``. (Peter Rowlands)
+
+ * Support untracked symlinks to paths outside the
+   repository. (Peter Rowlands, #842)
+
+0.20.19	2021-02-11
+
+ * Fix handling of negative matches in nested gitignores.
+   (Corentin Hembise, #836)
+
+0.20.18	2021-02-04
+
+ * Fix formatting in setup.py. (Jelmer Vernooĳ)
+
+ * Add release configuration. (Jelmer Vernooĳ)
+
+0.20.17	2021-02-04
+
+ * credentials: ignore end-of-line character. (Georges Racinet)
+
+ * Fix failure in get_untracked_paths when the repository contains symlinks.
+   (#830, #793, mattseddon)
+
+ * docs: Clarify that Git objects are created on `git add`.
+   (Utku Gultopu)
+
+0.20.16	2021-01-16
+
+ * Add flag to only attempt to fetch ignored untracked files when specifically requested.
+   (Matt Seddon)
+
 0.20.15	2020-12-23
 
  * Add some functions for parsing and writing bundles.
