@@ -956,10 +956,13 @@ def tag_create(
                         key = c.get_key(sign)
                         with gpg.Context(armor=True, signers=[key]) as ctx:
                             tag_obj.signature, unused_result = ctx.sign(
-                            tag_obj.as_raw_string(), mode=gpg.constants.sig.mode.DETACH)
+                                tag_obj.as_raw_string(),
+                                mode=gpg.constants.sig.mode.DETACH,
+                            )
                     else:
                         tag_obj.signature, unused_result = c.sign(
-                            tag_obj.as_raw_string(), mode=gpg.constants.sig.mode.DETACH)
+                            tag_obj.as_raw_string(), mode=gpg.constants.sig.mode.DETACH
+                        )
 
             r.object_store.add_object(tag_obj)
             tag_id = tag_obj.id
